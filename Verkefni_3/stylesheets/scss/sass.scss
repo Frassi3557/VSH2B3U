@@ -1,0 +1,134 @@
+$font-color: #009384;
+$hover-color: #61d4c9;
+$footer-color: #dfdfdf;
+
+@mixin animation ($delay, $duration, $animation) {
+    -webkit-animation-delay: $delay;
+    -webkit-animation-duration: $duration;
+    -webkit-animation-name: $animation;
+    -webkit-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+    -moz-animation-delay: $delay;
+    -moz-animation-duration: $duration;
+    -moz-animation-name: $animation;
+    -moz-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+    -o-animation-delay: $delay;
+    -o-animation-duration: $duration;
+    -o-animation-name: $animation;
+    -o-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+    animation-delay: $delay;
+    animation-duration: $duration;
+    animation-name: $animation;
+    animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+}
+
+@mixin keyframe ($animation_name) {
+    @-webkit-keyframes $animation_name {
+        @content;
+    }
+
+    @-moz-keyframes $animation_name {
+        @content;
+    }
+
+    @-o-keyframes $animation_name {
+        @content;
+    }
+
+    @keyframes $animation_name {
+        @content;
+    }
+}
+
+* {	
+	font-family: 'Raleway', sans-serif;
+	text-decoration: none;
+}
+body {
+	position: relative;
+	height: 100%;
+	list-style-type: none;
+	margin: 0 auto;
+	z-index: 10001;
+}
+nav {
+  background-color: #1C1C1C;
+  position: relative;
+  width: 100%;
+	height: 3em;
+	margin: 0 auto;
+	overflow: hidden;
+	li {
+		height: 3em;
+  	border-right: 1px solid gray;
+  	float: left;
+		padding-top: 0.8em;
+		a {
+			color: #fff;
+			padding: 100%;
+  		padding-left: 1em;
+  		padding-right: 1em;
+			
+		}
+		a:hover {
+			background-color: $hover-color;
+  		overflow: hidden;
+		}
+	}
+}
+.header-nav {
+  width: 100%;
+  margin: 0 auto;
+}
+section {
+	position: relative;
+	left: 0;
+	right: 0;
+	width: 100%;
+	margin: 0 auto;
+	background-color: #fff;
+	padding-bottom: 6em;
+	overflow: hidden;
+}
+img {
+	width: 60em;
+	height: 25em;
+}
+
+article,
+aside {
+	width: 90%;
+	margin: 0 auto;
+}
+.teasers {
+	width: 50%;
+	float: left;
+	p {
+		width: 90%;
+		margin: 0 auto;
+	}
+	@include animation(0s, 5s, changecolour)
+}
+@include keyframe(changecolour) {
+    0% {
+        background-color: #000;
+    }
+
+    100% {
+        background-color: #FFF;
+    }
+}
+footer {
+	position: absolute;
+	float: left;
+	height: 3em;
+	width: 100%;
+	background-color: $footer-color;
+  color: $font-color;
+  text-align: center;
+	padding: 1em;
+	bottom: 0;
+	left: 0;
+}
