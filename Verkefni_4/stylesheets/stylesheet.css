@@ -1,0 +1,140 @@
+*{
+	list-style: none;
+	text-decoration: none;
+	font-family: 'Raleway', sans-serif;
+}
+body, .page {
+    height: 100%;
+}
+section {
+    min-height: 100%;
+}
+header {
+	width: 100%;
+	background-color: #212121;
+	color: #fff;
+	position: fixed;
+	left: 0;
+	top: 0;
+  text-align: center;
+  z-index: 50;
+}
+.input{
+  display: none;
+}
+.checkbox{
+  font-size: 2.3em;
+  cursor: pointer;
+}
+.input:checked ~ nav{
+  height: 100%;
+}
+.menu {
+  height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.topmenu {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  background-color: #2c2c2c;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  }
+  .topmenu li {
+    list-style-type: none;
+    padding: .6em 1em;
+    font-size: 1.5em;
+    text-align: center;
+    transition: background-color .2s ease; 
+  }
+  .topmenu li{
+    color: #fff;
+    text-decoration: none;
+  }
+  .topmenu li:active{
+    background-color: #000;
+    color: #fff;
+  }
+.rand {
+    margin: 0;
+    padding-top: 3em;
+    text-align: center;
+    font-size: 1.5em;
+}
+.page{
+    margin: 0;
+}
+
+.footer {
+	display: flex;
+	text-align: center;
+	background-color: #dfdfdf;
+}
+.i-3 {
+	font-size: 1.5em;
+	flex-grow: 1;
+	color: #009384;
+	padding: 1em;
+}
+
+#i1 {
+	background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(red, yellow); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(red, yellow); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(red, yellow); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(red, yellow); /* Standard syntax */
+}
+#i2 {
+	background: yellow; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(yellow, green); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(yellow, green); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(yellow, green); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(yellow, green); /* Standard syntax */
+}
+#i3 {
+	background: green; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(green, blue); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(green, blue); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(green, blue); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(green, blue); /* Standard syntax */
+}
+#i4 {
+	background: white; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(blue, white); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(blue, white); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(blue, white); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(blue, white); /* Standard syntax */
+}
+
+/* Skjáir stærri en 48em */
+
+@media screen and (min-width: 48em) {
+    .topmenu {
+       margin: 0;
+       padding: 0;
+       text-align: left;
+       padding-left: 0;
+       display: flex;
+       flex-direction: row;
+    }
+    .checkbox {
+       display: none;
+    }
+    .menu{
+       height: 3.59em;
+       transition: all 1s ease;
+    }
+    .input:checked ~ nav{
+       height: 3.59em;;
+       transition: all 1s ease;
+    }
+    .topmenu li:hover{
+       background-color: #3c3c3c;
+       color: #fff;
+       transition: .5s;
+    }
+}
