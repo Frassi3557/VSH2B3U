@@ -8,13 +8,6 @@ body, .page {
 	font-family: 'Raleway', sans-serif;
 	background-color: #1c1c1c;
 }
-.darken {
-	display: block;
-	min-height: 100%;
-	width: 100%;
-	background-color: rgba(0, 0, 0, 0.6);	
-	position: absolute;
-}
 section {
   min-height: 100%;
 	z-index: 0;
@@ -84,9 +77,42 @@ header {
 .artists {
 	position: relative;
 	text-align: center;
+  padding-top: 5em;
+  width: 100%;
+  float: left;
+  left: 0;
+
+}
+.artists h2 {
+  margin: 0 auto;
+  border-bottom: 1px solid #fff;
+  width: 60%;
 }
 .artists p {
 	padding: 12px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #ffffff;
+    text-align: left;
+    padding: 8px;
+}
+tr {
+  background-color: #bebebe;
+}
+tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.eldborg {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
 }
 .back-img {
 	height: 35em;
@@ -107,10 +133,10 @@ header {
 	background-image: url("http://cdn.thedailybeast.com/content/dailybeast/articles/2014/09/14/what-if-jazz-giant-john-coltrane-had-lived/jcr:content/image.crop.800.500.jpg/47023364.cached.jpg");
 }
 .img2 {
-	background-image: url("http://i1.kym-cdn.com/entries/icons/original/000/017/844/the-goyim-know-shut-it-down-jew-walkie-talkie.jpg");
+	background-image: url("http://tsuts.tskoli.is/2t/0506992429/pictures/jazz.jpg");
 }
 .img3 {
-	background-image: url("https://i.imgur.com/ZWhG9Fz.jpg");
+	background-image: url("https://lisawallerrogers.files.wordpress.com/2014/06/1978-oct-26-republican-women-crowd-around-elizabeth-taylor-warner-at-meadowbrook-country-club-with-her-in-the-throng-of-workers-is-eddy-dalton-wife-of-governor-john-dalton-on-oct-26.jpg");
 }
 .img4 {
 	background-image: url("http://www.fishingiceland.com/wp-content/uploads/2014/01/Harpan.jpg");
